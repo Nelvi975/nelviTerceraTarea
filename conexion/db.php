@@ -1,14 +1,9 @@
 <?php
 
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'usuarios';
+$dsn = "mysql:host=localhost:3306;dbname=usuarios";
+$user = "root";
+$pass = "";
 
-try {
-  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-} catch (PDOException $e) {
-  die('coneccion fallida: ' . $e->getMessage());
-}
+$conn = new PDO($dsn, $user, $pass);
 
 ?>

@@ -7,25 +7,27 @@ function mostrar(){
 		}
 	});
 }
-function obtenerDatos(id){
+function obtenerDatos(id_cli){
 	$.ajax({
 		type:"POST",
-		data:"id=" + id,
-		url:"./../../procesos/obtenerDatos.php",
+		data:"id_cli=" + id_cli,
+		url:"../../procesos/cliente/obtener.php",
 		success:function(r){
 			r=jQuery.parseJSON(r);
-			$('#id').val(r['id']);
-			$('#nombreu').val(r['nombre']);
-			$('#apellidou').val(r['apellido']);
-			$('#emailu').val(r['email']);
-			
+			$('#id_cli').val(r['id_cli']);
+			$('#nom_user').val(r['nom_user']);
+			$('#ape_user').val(r['ape_user']);
+			$('#telf_user').val(r['telf_user']);
+			$('#dni_user').val(r['dni_user']);
+			$('#sex_user').val(r['sex_user']);
+			$('#direc_user').val(r['direc_user'])
 		}
 	});
 }
 function actualizarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"./../../procesos/actualizarDatos.php",
+		url:"../../procesos/cliente/actualizar.php",
 		data:$('#frminsertu').serialize(),
 		success:function(r){
 			if(r==1){
@@ -38,7 +40,7 @@ function actualizarDatos(){
 	});
 	return false;
 }
-function eliminarDatos(id){
+function eliminarDatos(id_cli){
 	swal({
 		title: "¿Estas seguro de eliminar este registro?",
 		text: "!Una vez eliminado no podra recuperarse¡",
@@ -50,9 +52,10 @@ function eliminarDatos(id){
 		if (willDelete) {
 			$.ajax({
 				type:"POST",
-				url:"./../../procesos/eliminarDatos.php",
-				data:"id="+id,
+				url:"../../procesos/cliente/eliminar.php",
+				data:"id_cli="+id_cli,
 				success:function(r){
+                    console.log(r);
 					if(r==1){
 						mostrar();
 						swal("Eliminado con exito!", ":D", "success");
@@ -67,11 +70,12 @@ function eliminarDatos(id){
 function insertarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"./../../procesos/insertarDatos.php",
-		data:$('#frminsert').serialize(),
+		url:"../../procesos/cliente/insertar.php",
+		data:$('#frminsertC').serialize(),
 		success:function(r){
+            console.log(r);
 			if(r==1){
-				$('#frminsert')[0].reset;//limpiar formulario
+				$('#frminsertC')[0].reset;//limpiar formulario
 				mostrar();
 				swal("¡Agregado con exito!", ":D", "success");
 			}else{

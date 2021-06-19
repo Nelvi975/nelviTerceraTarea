@@ -82,10 +82,10 @@
     <?php require_once "modalInsert.php" ?>
     <?php require_once "modalUpdate.php" ?>
 
-    <script src="../../librerias/jquery-3.4.1.min.js"></script>
-    <script src="../../librerias/popper.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../librerias/sweetalert.min.js"></script>
+    <script src="./../../librerias/jquery-3.4.1.min.js"></script>
+    <script src="./../../librerias/popper.min.js"></script>
+    <script src="./../../js/bootstrap.min.js"></script>
+    <script src="./../../librerias/sweetalert.min.js"></script>
     <script src="../../js/crudProducto.js"></script>
 
 

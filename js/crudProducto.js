@@ -77,6 +77,7 @@ function insertarDatos(){
 				swal("¡Agregado con exito!", ":D", "success");
 			}else{
 				swal("¡Errror!",":(","error")
+				console.log(r)
 			}
 		}
 	});

@@ -11,11 +11,11 @@
       <div class="modal-body">
           <form id="frminsert" onsubmit="return insertarDatos()" method="post">
               <label>Tipo de Producto</label>
-              <input type="text" id="tipo_pro" name="tipo_pro" class="form-control form-control-sm" required="">
+              <input type="text" id="tipo_pro"    name="tipo_pro" class="form-control form-control-sm" required>
               <label>Marca</label>
-              <input type="text" id="marca_pro" name="marca_pro" class="form-control form-control-sm" required="">
+              <input type="text" id="marca_pro"   name="marca_pro" class="form-control form-control-sm" required>
               <label>Precio</label>
-              <input type="text" id="precio_pro" name="precio_pro" class="form-control form-control-sm" required>
+              <input type="text" id="precio_pro"  name="precio_pro" class="form-control form-control-sm" required>
               <label>Detalle</label>
               <input type="text" id="detalle_pro" name="detalle_pro" class="form-control form-control-sm" required>
               <br>

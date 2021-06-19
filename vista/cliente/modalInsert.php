@@ -9,15 +9,19 @@
         </button>
       </div>
       <div class="modal-body">
-          <form id="frminsert" onsubmit="return insertarDatos()" method="post">
+          <form id="frminsertC" onsubmit="return insertarDatos()" method="post">
               <label>Nombre</label>
-              <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" required="">
+              <input type="text" id="nom_user" name="nom_user" class="form-control form-control-sm" required="">
               <label>Apellidos</label>
-              <input type="text" id="apellido" name="apellido" class="form-control form-control-sm" required="">
-              <label>Email</label>
-              <input type="email" id="email" name="email" class="form-control form-control-sm" required>
-              <label>Password</label>
-              <input type="password" id="password" name="password" class="form-control form-control-sm" required>
+              <input type="text" id="ape_user" name="ape_user" class="form-control form-control-sm" required="">
+              <label>telefono</label>
+              <input type="text" id="telf_user" name="telf_user" class="form-control form-control-sm" required="">
+              <label>DNI</label>
+              <input type="text" id="dni_user" name="dni_user" class="form-control form-control-sm" required="">
+              <label>Sexo</label>
+              <input type="text" id="sex_user" name="sex_user" class="form-control form-control-sm" required="">
+              <label>Direccion</label>
+              <input type="text" id="direc_user" name="direc_user" class="form-control form-control-sm" required="">
               <br>
                <input type="submit" value="Guardar" class="btn btn-primary">
           </form>
