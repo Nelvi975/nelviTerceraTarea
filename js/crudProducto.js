@@ -7,14 +7,14 @@ function mostrar(){
 		}
 	});
 }
-function obtenerDatos(id){
+function obtenerDatos(id_pro){
 	$.ajax({
 		type:"POST",
-		data:"id=" + id,
+		data:"id_pro=" + id_pro,
 		url:"../../procesos/producto/obtener.php",
 		success:function(r){
 			r=jQuery.parseJSON(r);
-			$('#id').val(r['id']);
+			$('#id_pro').val(r['id_pro']);
 			$('#tipo_prou').val(r['tipo_pro']);
 			$('#marca_prou').val(r['marca_pro']);
 			$('#precio_prou').val(r['precio_pro']);
@@ -51,7 +51,7 @@ function eliminarDatos(id_pro){
 		if (willDelete) {
 			$.ajax({
 				type:"POST",
-				url:"../../procesos/producto/eliminarDatos.php",
+				url:"../../procesos/producto/eliminar.php",
 				data:"id_pro="+id_pro,
 				success:function(r){
 					if(r==1){

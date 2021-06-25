@@ -1,9 +1,9 @@
 <?php
  
-class ClienteControlador{
+class ventaControlador{
     public function MostrarDatos(){
         require_once '../../conexion/conexion.php';
-         $query= $conn->prepare("SELECT id_cli, nom_user, ape_user, telf_user, dni_user, sex_user, direc_user FROM clientes");
+         $query= $conn->prepare("SELECT id_pe, nom_pe, Estado_pe, Precio_pe FROM pedido");
          $query->execute();
          return $query->fetchAll();
      }

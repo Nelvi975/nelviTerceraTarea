@@ -1,32 +1,31 @@
 function mostrar(){
 	$.ajax({
 		type:"POST",
-		url:"./../../procesos/tienda/mostrar.php",
+		url:"./../../procesos/venta/mostrar.php",
 		success:function(r){
 			$('#tablaDatos').html(r);
 		}
 	});
 }
-function obtenerDatos(id_ti){
+function obtenerDatos(id_cli){
 	$.ajax({
 		type:"POST",
-		data:"id_ti=" + id_ti,
-		url:"../../procesos/tienda/obtener.php",
+		data:"id_cli=" + id_cli,
+		url:"../../procesos/venta/obtener.php",
 		success:function(r){
 			r=jQuery.parseJSON(r);
-			$('#id_ti').val(r['id_ti']);
-			$('#nom_tiu').val(r['nom_ti']);
-			$('#nom_prop_tiu').val(r['nom_prop_ti']);
-			$('#direc_tiu').val(r['direc_ti']);
-			$('#telf_tiu').val(r['telf_ti']);
-			$('#rubro_tiu').val(r['rubro_ti'])
+			$('#id_pe').val(r['id_pe']);
+			$('#nom_peu').val(r['nom_pe']);
+			$('#Estado_peu').val(r['Estado_pe']);
+			$('#Precio_peu').val(r['Precio_pe']);
+			$('#distritou').val(r['distrito'])
 		}
 	});
 }
 function actualizarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"../../procesos/tienda/actualizar.php",
+		url:"../../procesos/venta/actualizar.php",
 		data:$('#frminsertu').serialize(),
 		success:function(r){
 			console.log(r)
@@ -40,7 +39,7 @@ function actualizarDatos(){
 	});
 	return false;
 }
-function eliminarDatos(id_ti){
+function eliminarDatos(id_cli){
 	swal({
 		title: "¿Estas seguro de eliminar este registro?",
 		text: "!Una vez eliminado no podra recuperarse¡",
@@ -52,8 +51,8 @@ function eliminarDatos(id_ti){
 		if (willDelete) {
 			$.ajax({
 				type:"POST",
-				url:"../../procesos/tienda/eliminar.php",
-				data:"id_ti="+id_ti,
+				url:"../../procesos/venta/eliminar.php",
+				data:"id_cli="+id_cli,
 				success:function(r){
                     console.log(r);
 					if(r==1){
@@ -70,7 +69,7 @@ function eliminarDatos(id_ti){
 function insertarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"../../procesos/tienda/insertar.php",
+		url:"../../procesos/venta/insertar.php",
 		data:$('#frminsert').serialize(),
 		success:function(r){
             console.log(r);

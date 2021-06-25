@@ -39,7 +39,7 @@
                         <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="#">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="Estadistico.php">Gráfico de ventas</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="../usuario/usuario.php">Usuario</a>
                     </li>
                 </ul>
             </div>

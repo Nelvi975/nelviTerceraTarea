@@ -10,14 +10,16 @@
       </div>
       <div class="modal-body">
           <form id="frminsert" onsubmit="return insertarDatos()" method="post">
-              <label>Nombre</label>
-              <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" required="">
-              <label>Apellidos</label>
-              <input type="text" id="apellido" name="apellido" class="form-control form-control-sm" required="">
-              <label>Email</label>
-              <input type="email" id="email" name="email" class="form-control form-control-sm" required>
-              <label>Password</label>
-              <input type="password" id="password" name="password" class="form-control form-control-sm" required>
+              <label>Nombre Tienda</label>
+              <input type="text" id="nom_ti" name="nom_ti" class="form-control form-control-sm" required="">
+              <label>Propietario</label>
+              <input type="text" id="nom_prop_ti" name="nom_prop_ti" class="form-control form-control-sm" required>
+              <label>Durección</label>
+              <input type="text" id="direc_ti" name="direc_ti" class="form-control form-control-sm" required>
+              <label>telefono</label>
+              <input type="text" id="telf_ti" name="telf_ti" class="form-control form-control-sm" required="">
+              <label>Rubro</label>
+              <input type="text" id="rubro_ti" name="rubro_ti" class="form-control form-control-sm" required="">
               <br>
                <input type="submit" value="Guardar" class="btn btn-primary">
           </form>

@@ -15,12 +15,12 @@ function obtenerDatos(id_cli){
 		success:function(r){
 			r=jQuery.parseJSON(r);
 			$('#id_cli').val(r['id_cli']);
-			$('#nom_user').val(r['nom_user']);
-			$('#ape_user').val(r['ape_user']);
-			$('#telf_user').val(r['telf_user']);
-			$('#dni_user').val(r['dni_user']);
-			$('#sex_user').val(r['sex_user']);
-			$('#direc_user').val(r['direc_user'])
+			$('#nom_useru').val(r['nom_user']);
+			$('#ape_useru').val(r['ape_user']);
+			$('#telf_useru').val(r['telf_user']);
+			$('#dni_useru').val(r['dni_user']);
+			$('#sex_useru').val(r['sex_user']);
+			$('#direc_useru').val(r['direc_user'])
 		}
 	});
 }
@@ -30,6 +30,7 @@ function actualizarDatos(){
 		url:"../../procesos/cliente/actualizar.php",
 		data:$('#frminsertu').serialize(),
 		success:function(r){
+			console.log(r)
 			if(r==1){
 				mostrar();
 				swal("Actualizado con exito!", ":D", "success");

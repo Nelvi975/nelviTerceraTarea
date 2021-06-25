@@ -17,10 +17,7 @@
   }
 ?>
 <?php
-if($user['cargo']=="administrador")
  require 'particiones/MenuAdmin.php';
-if($user['cargo']=="repartidor")
- require 'particiones/Menu.php';
 ?>
 <?php if (!empty($user)): ?>
 <h2>Bienvenido al inicio!!</h2>

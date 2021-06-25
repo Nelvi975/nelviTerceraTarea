@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
           <form id="frminsertu" onsubmit="return actualizarDatos()" method="post">
-          <input type="text" id="id" name="id" hidden="">
+          <input type="text" id="id_pro" name="id_pro" hidden="">
               <label>Tipo de Producto</label>
               <input type="text" id="tipo_prou" name="tipo_prou" class="form-control form-control-sm" required="">
               <label>Marca</label>

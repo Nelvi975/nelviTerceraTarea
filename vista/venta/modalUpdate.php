@@ -10,15 +10,16 @@
       </div>
       <div class="modal-body">
           <form id="frminsertu" onsubmit="return actualizarDatos()" method="post">
-            <input type="text" id="id" name="id" hidden="">
-              <label>Nombre</label>
-              <input type="text" id="nombreu" name="nombreu" class="form-control form-control-sm" required="">
-              <label>Apellidos</label>
-              <input type="text" id="apellidou" name="apellidou" class="form-control form-control-sm" required="">
-              <label>Email</label>
-              <input type="email" id="emailu" name="emailu" class="form-control form-control-sm" required>
-              <label>Password</label>
-              <input type="password" id="passwordu" name="passwordu" class="form-control form-control-sm" required>
+            <input type="text" id="id_pe" name="id_pe" hidden="">
+            <input type="text" id="id_DdP" name="id_DdP" hidden="">
+            <label>Nombre Pedido</label>
+              <input type="text" id="nom_peu" name="nom_peu" class="form-control form-control-sm" required="">
+              <label>Estado</label>
+              <input type="text" id="Estado_peu" name="Estado_peu" class="form-control form-control-sm" required="">
+              <label>Precio</label>
+              <input type="text" id="Precio_peu" name="Precio_peu" class="form-control form-control-sm" required>
+              <label>distrito</label>
+              <input type="text" id="distritou" name="distritou" class="form-control form-control-sm" required>
               <br>
                <input type="submit" value="Actualizar" class="btn btn-warning">
           </form>

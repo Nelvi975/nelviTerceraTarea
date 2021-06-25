@@ -1,6 +1,6 @@
 <?php
 require_once '../../controlador/clienteControlador.php';
- $id_cli=$_POST['id_cli'];
+ $id_pe=$_POST['id_pe'];
 
  echo clienteControlador::eliminarDatos($id_cli);
 ?>
